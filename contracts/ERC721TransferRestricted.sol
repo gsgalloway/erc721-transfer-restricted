@@ -12,6 +12,7 @@ abstract contract ERC721TransferRestricted is ERC721, AccessControlEnumerable {
 
     constructor(address admin) ERC721("MyToken", "MTK") {
         _grantRole(DEFAULT_ADMIN_ROLE, admin);
+        _grantRole(TRANSFER_APPROVER_ROLE, admin);
     }
 
 
