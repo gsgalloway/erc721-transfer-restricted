@@ -10,7 +10,7 @@ abstract contract ERC721TransferRestricted is ERC721, AccessControlEnumerable {
     mapping(uint256 => address) public approvedTransferRecipients;
 
 
-    constructor(address admin) ERC721("MyToken", "MTK") {
+    constructor(address admin, string memory name, string memory symbol) ERC721(name, symbol) {
         _grantRole(DEFAULT_ADMIN_ROLE, admin);
         _grantRole(TRANSFER_APPROVER_ROLE, admin);
     }
@@ -21,6 +21,10 @@ abstract contract ERC721TransferRestricted is ERC721, AccessControlEnumerable {
         address recipient
     ) external virtual onlyRole(TRANSFER_APPROVER_ROLE) {
         approvedTransferRecipients[tokenId] = recipient;
+    }
+
+    function revokeApproval(uint256 tokenId) external virtual onlyRole(TRANSFER_APPROVER_ROLE) {
+        delete approvedTransferRecipients[tokenId];
     }
 
     function _transfer(
