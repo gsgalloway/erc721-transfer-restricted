@@ -5,7 +5,7 @@ module.exports = {
     mocha: true,
     node: true,
   },
-  plugins: ["@typescript-eslint", "prettier"],
+  plugins: ["@typescript-eslint", "prettier", "workspaces"],
   extends: [
     "standard-with-typescript",
     "plugin:prettier/recommended",
@@ -16,6 +16,7 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "prettier",
+    "plugin:workspaces/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -44,13 +45,13 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["test/**/*.ts"],
+      files: ["**/test/**/*.ts"],
       rules: {
         "@typescript-eslint/no-unused-expressions": "off",
       },
     },
     {
-      files: ["typechain/**"],
+      files: ["**/typechain/**"],
       rules: {
         "eslint-comments/no-unlimited-disable": "off",
       },

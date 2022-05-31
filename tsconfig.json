@@ -7,6 +7,12 @@
     "outDir": "dist",
     "declaration": true
   },
-  "include": ["./scripts", "./test", "./typechain"],
-  "files": ["./hardhat.config.ts"]
+  "include": [
+    "./packages/erc721-transfer-restricted/scripts",
+    "./packages/erc721-transfer-restricted/test",
+    "./packages/erc721-transfer-restricted/typechain"
+  ],
+  "files": [
+    "./packages/erc721-transfer-restricted/hardhat.config.ts"
+  ]
 }
