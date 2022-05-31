@@ -1,10 +1,22 @@
 {
   "name": "@gsgalloway/solidity-erc721-transfer-restricted",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "Gavi Galloway",
+    "url": "https://twitter.com/gallowaygavilan"
+  },
+  "description": "ERC721 extension to add simple transfer restrictions",
+  "keywords": [
+    "Solidity",
+    "ERC721",
+    "NFT",
+    "Ethereum"
+  ],
   "private": false,
   "files": [
     "/contracts/ERC721TransferRestricted.sol"
   ],
+  "homepage": "https://github.com/gsgalloway/solidity-utils/tree/main/packages/erc721-transfer-restricted",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
@@ -13,19 +25,13 @@
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
     "@types/node": "^12.20.52",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
     "chai": "^4.3.6",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.6.8",
     "hardhat": "^2.9.6",
-    "prettier": "^2.6.2",
-    "prettier-plugin-solidity": "^1.0.0-beta.13",
-    "solhint": "^3.3.7",
     "solidity-coverage": "^0.7.21",
     "ts-node": "^10.8.0",
-    "typechain": "^5.2.0",
-    "typescript": "^4.7.2"
+    "typechain": "^5.2.0"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.6.0"
